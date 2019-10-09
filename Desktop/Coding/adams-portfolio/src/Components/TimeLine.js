@@ -5,7 +5,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 function Timeline () {
     return (
-<VerticalTimeline>
+{/* <VerticalTimeline>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
     date="August 2019"
@@ -63,13 +63,9 @@ function Timeline () {
     </p>
   </VerticalTimelineElement>
 
-</VerticalTimeline>
+</VerticalTimeline> */}
     )
 }
 
 export default Timeline;
 
-//  <VerticalTimelineElement
-//     // iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-//     // icon={<StarIcon />}
-//   />

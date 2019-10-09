@@ -1,19 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import "./App.css";
 import { } from 'reactstrap';
-import styled from 'styled-components';
 import { Route } from 'react-router-dom';
 import NavBar from "./Components/Nav";
 import TopHeader from "./Components/Header";
-import Timeline from "./Components/TimeLine";
+import LearedLanguage from "./Components/LearedLanguage";
+import Welcome from "./Components/Welcome";
+import Footer from "./Components/Footer";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <NavBar/>
-      <Route exact path="/" component={TopHeader}/>
-      <Route exact path="/timeline" component={Timeline}/>
+      <Route exact path="/" component={Welcome}/>
+      <Route exact path="/about" component={TopHeader}/>
+      <Route exact path="/about" component={LearedLanguage} /> 
+      <Route exact path="/contact" component={Contact} /> 
+      <Footer />
       
     </div>
   );
