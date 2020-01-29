@@ -7,7 +7,7 @@ function find() {
 
 function findBy(id) {
     return db('users').where(id)
-        .select('id', 'username', 'email').first()
+        .select('id', 'username', 'password').first()
 }
 
 function findById(id) {
