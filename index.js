@@ -8,7 +8,3 @@ server.listen(port, () => {
   console.log(`listening @ http://localhost:${port}`);
 })
 }
-
-server.get('/', (req, res) => {
-    res.send("<h2>BACK END BUILD WEEK</h2>")
-})
