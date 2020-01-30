@@ -33,7 +33,7 @@
     "jest": "^25.1.0",
     "cross-env": "^7.0.0"
   },
-   "jest": {
+  "jest": {
     "testEnvironment": "node"
   }
 }
