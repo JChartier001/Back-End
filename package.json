@@ -8,6 +8,10 @@
     "server": "cross-env NODE_ENV=dev nodemon index.js",
     "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weightlift-wept8/Back-End"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
