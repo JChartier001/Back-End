@@ -9,6 +9,6 @@ server.listen(port, () => {
 })
 }
 
-server.get("/", (req, res) => {
-    res.send("<h2>BACK END BUILD WEEK")
+server.get('/', (req, res) => {
+    res.send("<h2>BACK END BUILD WEEK</h2>")
 })
