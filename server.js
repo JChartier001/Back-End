@@ -11,6 +11,10 @@ server.use(helmet())
 server.use(cors())
 server.use(express.json())
 
+server.get('/', (req, res) => {
+    res.send("<h2>BACK END BUILD WEEK</h2>")
+})
+
 server.use('/auth', authRouter, UserRouter)
 
 
