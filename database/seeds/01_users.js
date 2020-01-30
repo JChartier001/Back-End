@@ -6,6 +6,6 @@ exports.seed = async (knex) => {
     await knex('users').truncate()
 
     await knex('users').insert([
-        { username: "IronMan", email: "Tony@stark.com", password: `${await hash('testing1')}`}
+        { firstname: "Harry", lastName:"Potter", email: "Harry@potter.com", password: `${await hash('testing1')}`}
      ])
 }
