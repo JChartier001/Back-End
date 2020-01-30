@@ -21,7 +21,7 @@ router.post('/register', (req, res) => {
 })
 
 router.post('/login', (req, res) => {
-    let { username, password } = req.body
+    let { username, password, } = req.body
     // find user by username
     UsersM.findBy({ username })
         .first()
@@ -42,28 +42,6 @@ router.post('/login', (req, res) => {
       })
 })
 
-// router.post('/login', (req, res) => {
-//   let { username, password } = req.body
-//   UsersM.findBy({ username })
-//     .first()
-//      .then(user => {
-//         if (user && bcrypt.compareSync(password, user.password)) {
-//           const token = assignToken(user)
-
-//           res.status(200).json({
-//             token,
-//             message: `Welcome ${user.username}`
-//           })
-//         } else {
-//           res.status(401).json({ message: "You shall not pass"})
-//         }
-//       })
-//       .catch(err => {
-//         res.status(500).json(err)
-//       })
-// });
-
-
 
 //creates and assigns token
 function assignToken(user) {
@@ -71,7 +49,7 @@ function assignToken(user) {
     const payload = {
         username: user.username,
         // email: user.email,
-        password: user.password,
+        // password: user.password,
     }
     // secret is saved 
     const secret = secrets.jwt

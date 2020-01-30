@@ -14,21 +14,21 @@ describe("auth router", () => {
   test("register a new user", async () => {
     const res = await supertest(server)
       .post("/auth/register")
-      .send({ username: "boo", password: "testing7" })
+      .send({ username: "CaptainAmerican", email: "Avengers@stark.com", password: "testing7" })
     expect(res.status).toBe(201)
   })
     test("register a new user", async () => {
     const res = await supertest(server)
       .post("/auth/register")
-      .send({ username: "harry", password: "testing1" })
-    expect(res.body.username).toBe("harry")
+      .send({ username: "Hulk", email: "Avengers@stark.com", password: "testing1" })
+    expect(res.body.username).toBe("Hulk")
   })
 
 
 test("login user with correct password", async () => {
     const res = await supertest(server)
      .post("/auth/login")
-      .send({ username: "harrypotter",  password: "testing1" })
+      .send({ username: "IronMan",  email: "Tony@stark.com", password: "testing1" })
         expect(res.status).toBe(200)
   })
    test("login in user incorrectly", async () => {

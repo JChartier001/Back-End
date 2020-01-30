@@ -5,9 +5,9 @@ function find() {
         .select('username', 'email')
 }
 
-function findBy(id) {
-    return db('users').where(id)
-        .select('id', 'username', 'password').first()
+function findBy(filter) {
+    return db('users').where(filter)
+        .select('id', 'username', 'password', 'email').first()
 }
 
 function findById(id) {
