@@ -1,15 +1,9 @@
-const server = require('./server')
-// const db = require()
 
-const port = process.env.PORT || 4000
+require('dotenv').config();
+const server = require("./api/server.js");
 
-server.get('/', (req, res) => {
-    res.send("<h2>BACK END BUILD WEEK</h2>")
-})
+const PORT = process.env.PORT || 4000;
 
-
-if (!module.parent) {
-server.listen(port, () => {
-  console.log(`listening @ http://localhost:${port}`);
-})
-}
+server.listen(PORT, () => {
+    console.log(`\n** Server running on port: ${PORT} **\n`);
+});
